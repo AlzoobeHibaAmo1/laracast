@@ -10,7 +10,7 @@
 <body>
 <h1>blog</h1>
 
-<p>{{$post}}</p>
+<p>{{$post->body}}</p>
 
 </body>
 </html>
