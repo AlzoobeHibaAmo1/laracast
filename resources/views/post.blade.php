@@ -8,7 +8,9 @@
     <title>test</title>
 </head>
 <body>
-<h1>{{ $name }}</h1>
+<h1>blog</h1>
+
+<p>{{$post}}</p>
 
 </body>
 </html>
