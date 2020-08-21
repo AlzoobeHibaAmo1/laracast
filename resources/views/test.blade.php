@@ -8,7 +8,7 @@
     <title>test</title>
 </head>
 <body>
-    <h1>Test is sucessful!</h1>
+<h1>{{ $name }}</h1>
 
 </body>
 </html>
