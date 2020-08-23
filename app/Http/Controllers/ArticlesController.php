@@ -12,8 +12,7 @@ class ArticlesController extends Controller
         return view('articles.index', ['article'=> Article::latest()->get()]);
     }
 
-    public function show($id){
-        $article = Article::find($id);
+    public function show(Article $article){
         return view('articles.show', ['article'=> $article]);
     }
 
@@ -42,12 +41,11 @@ class ArticlesController extends Controller
 
     }
 
-    public function edit($id){
-        $article = Article::find($id);
+    public function edit(Article $article){
         return view('articles.edit', ['article'=> $article]);
     }
 
-    public function update($id){
+    public function update(Article $article){
 
         request()->validate([
             'title' => 'required',
@@ -55,7 +53,6 @@ class ArticlesController extends Controller
             'body' => 'required'
         ]);
 
-        $article = Article::find($id);
 
         $article->title = request('title');
         $article->excerpt = request('excerpt');
