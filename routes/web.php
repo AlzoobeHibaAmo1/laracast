@@ -25,6 +25,8 @@ Route::get('/about', function () {
     ]);
 });
 
+Route::get('/articles/{article}', 'ArticlesController@show');
+
    // Route::get('/test', function () {
 
        // $name = request('name');
