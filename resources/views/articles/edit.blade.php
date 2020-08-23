@@ -15,6 +15,8 @@
                 <div class="field">
                     <label class="label" for="title">Title</label>
 
+                    <p class="help is-danger">{{ $errors->first('title') }}</p>
+
                     <div class="control">
                         <input class="input" type="text" name="title" id="title" value="{{$article->title}}">
 

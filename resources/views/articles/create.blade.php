@@ -13,7 +13,9 @@
                 @csrf
                 <div class="field">
                     <label class="label" for="title">Title</label>
-
+                    @if($errors->has('title'))
+                        <p class="help is-danger">{{ $errors->first('title') }}</p>
+                    @endif
                     <div class="control">
                         <input class="input" type="text" name="title" id="title">
 
