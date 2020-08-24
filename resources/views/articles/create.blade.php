@@ -34,6 +34,16 @@
                 </div>
 
                 <div class="field">
+                    <label class="label" for="tags">tags</label>
+                    <select name="tags[]" id="tags" >
+                        @foreach($tags as $tag)
+                            <option value="{{$tag->id}}" multiple >{{$tag->name}}</option>
+                        @endforeach
+                    </select>
+
+                </div>
+
+                <div class="field">
                     <label class="label" for="body">body</label>
 
                     <div class="control">
