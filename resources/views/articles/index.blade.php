@@ -4,13 +4,16 @@
 
     <ul class="style1">
 
-        @foreach ($articles as $article)
+        @forelse($article as $articles)
 
             <li class="first">
-                <h3><a href="/articles/{{$article->id}}">{{$article->title}}</a></h3>
-                <p>{{$article->excerpt}}</p>
+                <h3><a href="/articles/{{$articles->id}}">{{$articles->title}}</a></h3>
+                <p>{{$articles->excerpt}}</p>
             </li>
-        @endforeach
+
+        @empty
+            <p>no relevent articles yet</p>
+        @endforelse
     </ul>
 
     @endsection
